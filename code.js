@@ -5,26 +5,36 @@ const appAbout = $("#app-about")
 const appShare = $("#app-share")
 const appShareText = $("#app-share-text")
 
-const btnOpen = $("#btn-open")
+const btnOpenBrowser = $("#btn-open-browser")
 
 function showAbout() {
     appShare.css("display", "none")
 
-    btnOpen.css("display", "none")
+    btnOpenBrowser.css("display", "none")
 }
 
 function showShare(url) {
     appAbout.css("display", "none")
 
     appShareText.text(url)
-    btnOpen.attr("href", url)
+    btnOpenBrowser.attr("href", url)
 }
 
 if(window.location.hash) {
     const url = window.location.hash.substring(1)
-    showShare(url)
+    if(!url.startsWith("https://") && !url.startsWith("http://")) {
+        showAbout()
+    }else{
+        showShare(url)
 
-    if(!isAndroid) window.location.href = url
+        if(!isAndroid) {
+            window.location.href = url
+        }else{
+            const kitshnUrl = url.replace("https://", "kitshn://")
+                .replace("http://", "kitshn://")
+            window.location.href = kitshnUrl
+        }
+    }
 }else{
     showAbout()
 }
