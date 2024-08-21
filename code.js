@@ -30,9 +30,7 @@ if(window.location.hash) {
         if(!isAndroid) {
             window.location.href = url
         }else{
-            const kitshnUrl = url.replace("https://", "kitshn://")
-                .replace("http://", "kitshn://")
-            window.location.href = kitshnUrl
+            window.location.href = `kitshn://${ url }`
         }
     }
 }else{
