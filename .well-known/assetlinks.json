@@ -1,0 +1,13 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "de.kitshn.android",
+            "sha256_cert_fingerprints": [
+                "5D:1A:9A:D4:16:24:6D:76:75:3F:51:57:7E:00:CD:6D:72:DC:7C:3F:36:F5:F3:EC:1F:CB:DB:2B:C8:DD:31:7D",
+                "46:7C:B7:4E:2A:5B:75:8E:24:B2:ED:8F:DC:3E:AA:12:5A:29:3E:D5:E9:25:A1:DC:EB:C0:D8:7E:75:B3:28:DC"
+            ]
+        }
+    }
+]
