@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+
+        <title>kshli — kitshn links</title>
+
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/fonts/fonts.css" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="center">
+            <div id="app-about" class="ctn flex-row flex-center">
+                <img style="margin-right: 46px;" class="app" src="/icon.png" />
+                
+                <div>
+                    <h1>kshli — kitshn links</h1>
+                    <p>This website allows users to share recipes within the kitshn Android app. Since kitshn connects to self-hosted Tandoor instances, simply sharing recipe links directly won't work due to how Android App Links function.</p>
+                </div>
+            </div>
+
+            <div id="app-share" class="ctn flex-row flex-center">
+                <img style="margin-right: 46px;" class="app" src="/icon.png" />
+                
+                <div>
+                    <h1>Somebody shared this</h1>
+                    <p id="app-share-text"></p>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+
+            <a id="btn-open" style="margin-top: 8px">
+                <div class="btn disabled outlined">
+                    <span>View in browser</span>
+                </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=de.kitshn.android" style="margin-top: 8px">
+                <div class="btn disabled">
+                    <span>Download app</span>
+                </div>
+            </a>
+        </div>
+
+        <script src="/code.js"></script>
+    </body>
+</html>
