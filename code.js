@@ -20,22 +20,18 @@ function showShare(url) {
     btnOpenBrowser.attr("href", url)
 }
 
-if(window.location.hash) {
-    const url = window.location.hash.substring(1)
-    if(url.length > 8) {
-        showShare(
-            (url.startsWith("https://") || url.startsWith("http://")) 
-                ? url
-                : `https://${ url }`
-        )
+if(window.location.hash && window.location.hash.length > 8) {
+    const hashValue = window.location.hash.substring(1)
+    const url = (hashValue.startsWith("https://") || hashValue.startsWith("http://")) 
+        ? hashValue 
+        : `https://${ hashValue }`
 
-        if(!isAndroid) {
-            window.location.href = url
-        }else{
-            window.location.href = `kitshn://${ url }`
-        }
+    showShare(url)
+
+    if(!isAndroid) {
+        window.location.href = url
     }else{
-        showAbout()
+        window.location.href = `kitshn://${ url }`
     }
 }else{
     showAbout()
