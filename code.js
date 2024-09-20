@@ -22,16 +22,20 @@ function showShare(url) {
 
 if(window.location.hash) {
     const url = window.location.hash.substring(1)
-    if(!url.startsWith("https://") && !url.startsWith("http://")) {
-        showAbout()
-    }else{
-        showShare(url)
+    if(url.length > 8) {
+        showShare(
+            (url.startsWith("https://") || url.startsWith("http://")) 
+                ? url
+                : `https://${ url }`
+        )
 
         if(!isAndroid) {
             window.location.href = url
         }else{
             window.location.href = `kitshn://${ url }`
         }
+    }else{
+        showAbout()
     }
 }else{
     showAbout()
