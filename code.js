@@ -36,11 +36,15 @@ if(window.location.hash && window.location.hash.length > 8) {
 
     showShare(url)
 
-    if(!isAndroid && !isIOS) {
-        window.location.href = url
-    }else{
+    if(isAndroid) {
         window.location.href = `kitshn://${ url }`
+    }else if(isIOS) {
+        window.location.href = `kitshn://${ encodeURIComponent(url) }`
+    }else{
+        window.location.href = url
     }
+
+    btoa()
 }else{
     showAbout()
 }
