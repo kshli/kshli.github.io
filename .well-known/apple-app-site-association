@@ -5,8 +5,11 @@
                 "appIDs": [
                     "D6V8583JGU.de.kitshn.appleios"
                 ],
-                "paths": [
-                    "*"
+                "components": [
+                    {
+                        "/": "/*",
+                        "comment": "Matches any URL"
+                    }
                 ]
             }
         ]
