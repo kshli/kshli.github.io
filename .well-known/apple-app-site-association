@@ -1,0 +1,14 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [
+                    "D6V8583JGU.de.kitshn.appleios"
+                ],
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    }
+}
