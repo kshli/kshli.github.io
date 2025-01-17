@@ -1,4 +1,5 @@
 const isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1
+const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
 const appAbout = $("#app-about")
 
@@ -6,6 +7,13 @@ const appShare = $("#app-share")
 const appShareText = $("#app-share-text")
 
 const btnOpenBrowser = $("#btn-open-browser")
+const btnDownloadApp = $("#btn-download-app")
+
+if(isIOS) {
+    btnDownloadApp.attr("href", "https://apps.apple.com/us/app/kitshn-for-tandoor/id6740168361")
+}else{
+    btnDownloadApp.attr("href", "https://play.google.com/store/apps/details?id=de.kitshn.android")
+}
 
 function showAbout() {
     appShare.css("display", "none")
@@ -28,7 +36,7 @@ if(window.location.hash && window.location.hash.length > 8) {
 
     showShare(url)
 
-    if(!isAndroid) {
+    if(!isAndroid && !isIOS) {
         window.location.href = url
     }else{
         window.location.href = `kitshn://${ url }`
