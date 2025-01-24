@@ -1,23 +1,16 @@
 {
     "applinks": {
+        "apps": [],
         "details": [
             {
                 "appIDs": [
-                    "D6V8583JGU.de.kitshn.appleios"
+                    "7C29XH34W5.de.kitshn.appleios"
+                ],
+                "paths": [
+                    "*"
                 ],
                 "components": [
-                    {
-                        "/": "/*",
-                        "comment": "Matches any URL"
-                    },
-                    {
-                        "/": "/",
-                        "comment": "Match base URL"
-                    },
-                    {
-                        "/": "/#*",
-                        "comment": "Matches any shared URL"
-                    }
+                    {"/": "/*"}
                 ]
             }
         ]
