@@ -9,6 +9,14 @@
                     {
                         "/": "/*",
                         "comment": "Matches any URL"
+                    },
+                    {
+                        "/": "/",
+                        "comment": "Match base URL"
+                    },
+                    {
+                        "/": "/#*",
+                        "comment": "Matches any shared URL"
                     }
                 ]
             }
